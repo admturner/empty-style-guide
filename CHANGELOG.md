@@ -21,6 +21,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Changed
 
+- Add content escaping to head CSS call.
 - Use conditional walker to serve UI stylesheet(s) in the `head.html` include file.
 - Add new changelog file to the exclude list to keep Jekyll from processing it.
 

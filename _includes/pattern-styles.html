@@ -1,0 +1,19 @@
+<style type="text/css">
+    :host {
+        border: 1px solid lightblue;
+        contain: content;
+        display: block;
+        font: 14px/22px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    }
+    .pattern-inner {
+        margin: 1rem;
+    }
+</style>
+
+{%- for item in site.data.stylesheets.styles -%}
+    {%- if 'pattern-library' == item.group -%}
+        {%- for css in item.sheets -%}
+            <link rel="stylesheet" id="{{ css.name | slugify }}" href="{{ css.url | encode_url }}?v{{ site.version }}" type="{{ css.type | encode }}" media="{{ css.media | encode }}">
+        {%- endfor -%}
+    {%- endif -%}
+{%- endfor -%}

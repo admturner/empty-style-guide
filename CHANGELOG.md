@@ -17,6 +17,24 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## (unreleased)
+
+### Added
+
+- First pattern subdirectory for Global elements and sample first pattern file, `colors.md`.
+- Directory `_patterns/` to store individual pattern files and subdirectories for organization.
+- A layout file specific to files in the 'patterns' collection, called `pattern.html`.
+- Add js to create the custom pattern element and load the shadow DOM.
+- Create `foot.html` include to serve JS files after the footer.
+
+### Changed
+
+- Define the 'patterns' collection in `_config.yml`, set it to render on build and set default values to point all files in the patterns directory to the `patterns.html` layout.
+- Set `show_dir_listing` to false to prevent navigating directories in production.
+- Remove unneeded 'sitecolors' parent group from the `colors.yml` data file to simplify looping across the groups.
+- Add call to `foot.html` include in `default.html` layout.
+- Update new `foot.html` include to serve `patterns.js` conditionally on pattern collection pages.
+
 ## 0.2.0 (2018-03-20)
 
 ### Changed

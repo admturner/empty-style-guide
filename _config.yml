@@ -12,7 +12,6 @@ baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: admturner
 github_repository_url: https://github.com/admturner/empty-style-guide
-markdown: kramdown
 version: 0.2.0
 
 # Exclude from processing.
@@ -25,7 +24,24 @@ exclude:
   - LICENSE.txt
 
 # Build settings.
+markdown: kramdown
 permalink: /blog/:year/:month/:day/:title.html
+show_dir_listing: false
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Collections
+collections:
+  patterns:
+    title: Pattern Library
+    output: true
+    permalink: /patterns/:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "patterns"
+    values:
+      layout: pattern

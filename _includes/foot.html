@@ -1,5 +1,5 @@
-{%- for pattern in site.patterns -%}
-    {%- if pattern.id == page.id -%}
-        <script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js"></script>
+{%- for item in site.patterns -%}
+    {%- if item.id == page.id -%}
+        <script type="text/javascript" src="{{ "/assets/js/patterns.js" | relative_url }}"></script>
     {%- endif -%}
 {%- endfor -%}

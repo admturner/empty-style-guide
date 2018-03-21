@@ -12,6 +12,7 @@ sitecolors:
             hex: 0e848f
             rgb: 14, 132, 143
     - group: secondary
+      colors:
           - name: mauve
             hex: 8f0656
             rgb: 143, 6, 86
@@ -22,6 +23,7 @@ sitecolors:
             hex: 1a1b22
             rgb: 26, 27, 34
     - group: support
+      colors:
           - name: black
             hex: 1a1a1a;
             rgb: 26, 26, 26

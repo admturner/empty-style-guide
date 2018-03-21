@@ -17,7 +17,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
-## (unreleased)
+## 0.3.0 (2018-03-21)
 
 ### Added
 

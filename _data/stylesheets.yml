@@ -1,0 +1,28 @@
+# Styles
+#
+# Define all of your styles here. Notice these are separated by UI and Pattern
+# Library styles. The UI styles are for the style guide site itself, and the
+# Pattern Library styles are for the site you are documenting. The UI style(s)
+# are called by `_includes/head.html`.
+#
+# The Pattern Library styles are called by `_includes/pattern-styles.html` and
+# printed with the `_layouts/pattern.html` layout. Note that the pattern styles
+# are further subdivided by "development" and "production" to allow for pointing
+# to separate stylesheets.
+styles:
+  - group: ui
+    sheets:
+      - name: Main UI CSS
+        url: /assets/css/main.css
+        type: text/css
+        media: all
+  - group: pattern-library
+    sheets:
+      - name: Empty WordPress Theme CSS
+        url: http://local.wordpress.test/style.css
+        type: text/css
+        media: all
+      - name: Open Sans CSS
+        url: //fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C600%2C600italic%2C400%2C400italic%2C700&amp;subset=latin%2Clatin-ext
+        type: text/css
+        media: all

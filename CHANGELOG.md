@@ -17,6 +17,16 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## (unreleased)
+
+### Todo
+
+- Create grid system for style-guide ui.
+- Style section navigation menu:
+  - Remove bullets.
+  - Set .nav-item:not(.current) > ul to display: none to hide group sub-navs when not viewing that group.
+  - Make things prettier.
+
 ## 0.4.0 (2018-03-21)
 
 ### Added

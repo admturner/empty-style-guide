@@ -1,0 +1,18 @@
+<nav class="section-nav">
+    <ul>
+        {%- assign groups = site.patterns | group_by: 'category' | sort: 'name' -%}
+        {%- for group in groups -%}
+            {%- if '' != group.name -%}
+                <li class="nav-item nav-section-title {% if group.name == page.category %}current{% endif %}">
+                    {%- assign items = group.items | sort: 'order' -%}
+                    <a href="{{ items.first.url | relative_url }}">{{ group.name }}</a>
+                    <ul>
+                        {%- for item in items -%}
+                            <li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                        {%- endfor -%}
+                    </ul>
+                </li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+</nav>

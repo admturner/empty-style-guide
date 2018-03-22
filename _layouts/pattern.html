@@ -3,26 +3,39 @@ layout: default
 ---
 <article class="post">
 
-  <header class="post-header">
-	<h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
 
-  <div class="post-content">
+    <div class="post-content">
 
-	  <template id="pattern-demo">
+        <div class="pattern-details">
+            <div class="pattern-usage">
+                <h2>Usage</h2>
+            </div>
+            <div class="pattern-source">
+                {%- if true == page.show_source -%}
+                    <h2>Source</h2>
+                    {%- highlight html -%}
+                        {{ content }}
+                    {%- endhighlight -%}
+                {%- endif -%}
+            </div>
+        </div>
 
-          {%- include pattern-styles.html -%}
+        <h2>Demo</h2>
+        <template id="pattern-demo">
 
-		  <body>
-			  <div class="pattern-inner">
-				  {{ content }}
-			  </div>
-		  </body>
+            {%- include pattern-styles.html -%}
 
-	  </template>
+            <div class="pattern-inner">
+                {{ content }}
+            </div>
 
-	  <pattern-demo></pattern-demo>
+        </template>
 
-  </div>
+        <pattern-demo></pattern-demo>
+
+    </div>
 
 </article>

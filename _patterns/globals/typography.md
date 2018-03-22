@@ -1,6 +1,6 @@
 ---
 category: 1. Global
-order: 2
+order: 3
 title: Typography
 description: The site typography.
 ---

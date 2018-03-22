@@ -1,6 +1,6 @@
 ---
 category: 1. Global
-order: 1
+order: 2
 title: Colors
 description: The site colors.
 ---

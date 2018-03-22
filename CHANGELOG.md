@@ -17,10 +17,11 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
-## (unreleased)
+## 0.4.0 (2018-03-21)
 
 ### Added
 
+- Add initial pattern item pages.
 - Include file `nav-section.html` to generate the section navigation menu to display all pattern library groups and pages.
 
 ## 0.3.0 (2018-03-21)

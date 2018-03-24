@@ -7,35 +7,28 @@ layout: default
         <h1 class="post-title">{{ page.title | escape }}</h1>
     </header>
 
-    <div class="post-content">
+    <section class="pattern-usage">
+        <h2>Usage</h2>
+    </section>
 
-        <div class="pattern-details">
-            <div class="pattern-usage">
-                <h2>Usage</h2>
-            </div>
-            <div class="pattern-source">
-                {%- if true == page.show_source -%}
-                    <h2>Source</h2>
-                    {%- highlight html -%}
-                        {{ content }}
-                    {%- endhighlight -%}
-                {%- endif -%}
-            </div>
-        </div>
+    <section class="pattern-source">
+        {%- if true == page.show_source -%}
+            <h2>Source</h2>
+            {%- highlight html -%}
+                {{ content }}
+            {%- endhighlight -%}
+        {%- endif -%}
+    </section>
 
+    <section class="pattern-demo">
         <h2>Demo</h2>
         <template id="pattern-demo">
-
             {%- include pattern-styles.html -%}
-
             <div class="pattern-inner">
                 {{ content }}
             </div>
-
         </template>
-
         <pattern-demo></pattern-demo>
-
-    </div>
+    </section>
 
 </article>

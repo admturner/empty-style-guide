@@ -1,11 +1,62 @@
 /**
+ * Medium & Large Grid
+ */
+body {
+    display: grid;
+    grid: "header header header" 150px /* row */
+          "nav main main" auto /* row */
+          "footer footer footer" 100px /* row */
+          / minmax(175px, 3fr) 9fr 3fr; /* columns */
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+article {
+    display: grid;
+    grid: "aheader aheader" 50px /* row */
+          "secone sectwo" auto /* row */
+          "secthree secthree" auto /* row */
+          / 1.5fr 1fr; /* columns */
+
+    header {
+        grid-area: aheader;
+    }
+
+    .pattern-source {
+        grid-area: secone;
+    }
+
+    .pattern-usage {
+        grid-area: sectwo;
+    }
+
+    .pattern-demo {
+        grid-area: secthree;
+    }
+}
+
+/**
  * Site header
  */
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: $spacing-unit * 1.865;
-    position: relative; /* // Positioning mobile navigation icon */
+    position: relative; /* Positioning mobile navigation icon */
 }
 
 .site-title {
@@ -125,7 +176,6 @@
     @include relative-font-size(0.9375);
     color: $grey-color;
     margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
 }
 
 .footer-col {

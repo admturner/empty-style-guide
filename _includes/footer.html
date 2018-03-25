@@ -1,10 +1,7 @@
 <footer class="site-footer h-card">
 
-    <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <section class="footer-col footer-col-1">
+    <section>
+        <h2>{{ site.title | escape }}</h2>
         <ul class="contact-list">
             <li class="p-name">
                 {%- if site.author -%}
@@ -21,12 +18,13 @@
         </ul>
     </section>
 
-    <section class="footer-col footer-col-2">
+    <section>
         {%- include social.html -%}
     </section>
 
-    <section class="footer-col footer-col-3">
+    <section>
         <p>{{- site.description | escape -}}</p>
+        <data class="u-url" href="{{ "/" | relative_url }}"></data>
     </section>
 
 </footer>

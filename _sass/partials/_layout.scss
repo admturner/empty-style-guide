@@ -2,10 +2,11 @@
  * Medium & Large Grid
  */
 body {
+    min-height: 100vh;
     display: grid;
-    grid: "header header header" 150px /* row */
-          "nav main main" auto /* row */
-          "footer footer footer" 100px /* row */
+    grid: "header header header" 6em
+          "nav main main" auto
+          "footer footer footer" minmax(6em, 10em) /* row */
           / minmax(175px, 3fr) 9fr 3fr; /* columns */
 }
 
@@ -22,30 +23,39 @@ main {
 }
 
 footer {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
     grid-area: footer;
+    justify-content: space-evenly;
+
+    section {
+        min-width: 300px;
+        width: 25vw;
+    }
 }
 
 article {
     display: grid;
-    grid: "aheader aheader" 50px /* row */
-          "secone sectwo" auto /* row */
-          "secthree secthree" auto /* row */
-          / 1.5fr 1fr; /* columns */
+    grid: "article-header article-header" 1fr /* row */
+          "section-one section-two" auto /* row */
+          "section-three section-three" auto /* row */
+          / minmax(100px, 1.3fr) minmax(100px, 1fr); /* columns */
 
     header {
-        grid-area: aheader;
+        grid-area: article-header;
     }
 
     .pattern-source {
-        grid-area: secone;
+        grid-area: section-one;
     }
 
     .pattern-usage {
-        grid-area: sectwo;
+        grid-area: section-two;
     }
 
     .pattern-demo {
-        grid-area: secthree;
+        grid-area: section-three;
     }
 }
 
@@ -170,33 +180,6 @@ article {
 .social-media-list {
     list-style: none;
     margin-left: 0;
-}
-
-.footer-col-wrapper {
-    @include relative-font-size(0.9375);
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {

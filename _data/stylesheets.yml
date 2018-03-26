@@ -19,7 +19,7 @@ styles:
   - group: pattern-library
     sheets:
       - name: Empty WordPress Theme CSS
-        url: http://local.wordpress.test/style.css
+        url: https://adamturner.org/wp-content/themes/grammatizator_act/library/css/style.css
         type: text/css
         media: all
       - name: Open Sans CSS

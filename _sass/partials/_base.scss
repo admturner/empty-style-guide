@@ -50,15 +50,17 @@ figcaption {
 /**
  * Lists
  */
-ul,
-ol {
-    margin-left: $spacing-unit;
-}
+main {
+    ul,
+    ol {
+        margin-left: $spacing-unit;
+    }
 
-li {
-    > ul,
-    > ol {
-        margin-bottom: 0;
+    li {
+        > ul,
+        > ol {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -75,11 +77,8 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
+    &:hover,
+    &:focus {
         color: $text-color;
     }
 

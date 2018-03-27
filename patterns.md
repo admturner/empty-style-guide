@@ -3,6 +3,19 @@ layout: page
 title: Pattern Library
 ---
 
-{%- for pattern in site.patterns -%}
-    <h3><a class="post-link" href="{{ pattern.url | relative_url }}">{{ pattern.title | escape }}</a></h3>
-{%- endfor -%}
+<ul>
+    {%- assign patterns = site.patterns | group_by: 'category' | sort: 'name'  -%}
+    {%- for group in patterns -%}
+        {%- if '' != group.name -%}
+            <li>
+                {%- assign items = group.items | sort: 'order' -%}
+                <a href="{{ items.first.url | relative_url }}">{{ group.name }}</a>
+                {%- for item in items -%}
+                    <ul>
+                        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                    </ul>
+                {%- endfor -%}
+            </li>
+        {%- endif -%}
+    {%- endfor -%}
+</ul>

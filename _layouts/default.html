@@ -7,15 +7,16 @@
 
         {%- include header.html -%}
 
+        {%- for item in site.patterns -%}
+            {%- if item.id == page.id -%}
+                {%- include nav-section.html -%}
+            {%- endif -%}
+        {%- endfor -%}
+
         <main class="page-content" aria-label="Content">
 
-            {%- include nav-section.html -%}
+            {{ content }}
 
-            <div class="wrapper">
-
-                {{ content }}
-
-            </div>
         </main>
 
         {%- include footer.html -%}

@@ -17,6 +17,35 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## 0.5.0 (2018-03-26)
+
+### Added
+
+- Initial style for the section navigation menu.
+- Expand/collapse SVG icon in the `nav-section` include.
+- Update `header` include markup and styles to use flex layout for the site title and the main nav menu.
+- Update `footer` include markup and styles to use flex layout.
+- Create initial grid layout defining a full-width header, a two-column middle row with the section nav and the main content, and a full-width footer.
+- Sections in the `pattern.html` layout for "Usage" and "Source" of each pattern.
+
+### Changed
+
+- Use conditional to only display section navigation on pattern library pages.
+- Make section navigation menu expandable and collapsible using CSS display.
+- Darken default link color.
+- Move default list styles from universal to target only `main` lists.
+- Simplify header markup and prep for JS toggler instead of `input` hack.
+- Stop using vertical rhythm mixin.
+- Move the section nav menu outside of the `main` element (both to simplify grid declaration and because as a repeating element it maybe shouldn't be there anyway).
+- Switched from 2 spaces to 4-space tabs in `_base` and `_layout` scss files.
+- Convert all pattern files from Markdown to HTML to improve fidelity of pattern source. (Jekyll will still process them as long as they have YAML frontmatter.)
+
+### Removed
+
+- Remove all styles related to float-style site layout.
+- Refactor all layouts and includes to remove `.wrapper` divs and use `.section`s where appropriate.
+- Refactor the header markup to remove unneeded classes.
+
 ## 0.4.0 (2018-03-21)
 
 ### Added

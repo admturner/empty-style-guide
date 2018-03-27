@@ -7,11 +7,13 @@ body {
     grid: "header header header" 6em
           "nav main main" auto
           "footer footer footer" minmax(6em, 10em) /* row */
-          / minmax(175px, 3fr) 9fr 3fr; /* columns */
+          / minmax(16rem, 3fr) 9fr 3fr; /* columns */
 }
 
 .site-header {
     align-items: center;
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-color-light;
     display: flex;
     justify-content: space-between;
     grid-area: header;
@@ -19,6 +21,68 @@ body {
 
 .section-nav {
     grid-area: nav;
+    position: relative;
+
+    > ul {
+        margin: 1.5rem;
+    }
+
+    .nav-section-title {
+        background: lighten($grey-color-light, 5%);
+        border-bottom: 1px solid darken($grey-color-light, 10%);
+
+        > a {
+            background: $grey-color-light;
+        }
+
+        ul a {
+            padding-left: 2rem;
+        }
+    }
+
+    a {
+        display: block;
+        padding: .75em;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            background: $brand-color;
+            color: #fff;
+
+            & .expandable {
+                fill: #fff;
+            }
+        }
+
+        & .expandable {
+            fill: $brand-color;
+            height: 24px;
+            position: absolute;
+            right: 2.4rem;
+            width: 24px;
+        }
+    }
+
+    .current {
+        > a {
+            color: $text-color;
+        }
+
+        & .expandable {
+            fill: #fff;
+            transform: rotate(-90deg);
+        }
+    }
+
+    .nav-section-title.current > a {
+        color: #fff;
+        background: $brand-color;
+    }
+
+    .nav-item:not(.current) > ul {
+        display: none;
+    }
 }
 
 main {
@@ -65,11 +129,6 @@ article {
 /**
  * Site header
  */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-}
-
 .site-title {
     @include relative-font-size(1.625);
     font-weight: 400;

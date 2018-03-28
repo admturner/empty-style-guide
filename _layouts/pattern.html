@@ -17,7 +17,12 @@ layout: default
     </section>
 
     <section class="pattern-usage">
-        <h2>Usage</h2>
+        {%- for use in site.usage -%}
+            {%- if page.title == use.title -%}
+                <h2>Usage</h2>
+                {{ use.content | markdownify }}
+            {%- endif -%}
+        {%- endfor -%}
     </section>
 
     <section class="pattern-demo">

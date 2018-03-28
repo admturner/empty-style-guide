@@ -37,6 +37,9 @@ collections:
     title: Pattern Library
     output: true
     permalink: /patterns/:path/
+  usage:
+    title: Usage
+    output: false
 
 defaults:
   -
@@ -45,3 +48,9 @@ defaults:
       type: "patterns"
     values:
       layout: pattern
+  -
+    scope:
+      path: ""
+      type: "usage"
+    values:
+      layout: usage

@@ -6,7 +6,7 @@
     {%- for item in site.data.stylesheets.styles -%}
         {%- if 'ui' == item.group -%}
             {%- for css in item.sheets -%}
-                <link rel="stylesheet" id="{{ css.name | slugify }}" href="{{ css.url | relative_url }}?v{{ site.version }}" type="{{ css.type | encode }}" media="{{ css.media | encode }}">
+                <link rel="stylesheet" id="{{ css.name | slugify }}" href="{{ css.url | relative_url }}?v{{ site.version }}" {%- if css.type -%}type="{{ css.type | encode }}"{%- endif -%}{%- if css.media -%}media="{{ css.media | encode }}"{%- endif -%}>
             {%- endfor -%}
         {%- endif -%}
     {%- endfor -%}

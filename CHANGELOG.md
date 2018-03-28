@@ -17,6 +17,28 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## (unreleased)
+
+### Fixed
+
+- Must use quotation marks around numbered titles. Also 404 shouldn't use `title:` yaml to avoid appearing in the main nav.
+
+### Changed
+
+- Remove inline styles from the 404 page and simplify the template (point to the `page` layout instead of `default`).
+- Replace default first post with a brief post about doing CSS audits.
+- Add some frontmatter to the `main.scss` file.
+
+### Added
+
+- Basic layout template for the items in the 'usage' collection.
+- Add "Usage" section to the `pattern.html` layout when one is present in the `_usage` directory matching the title of the current pattern.
+- Add "Usage" collection definition in the site config file.
+- Add full pattern library navigation menu to the `patterns.md` pattern library splash page.
+- Directory `_usage` to contain usage descriptions, organized however the user wants, as long as the title matches exactly with the target pattern being described.
+- Add Open Sans to the pattern demo font stack.
+- Add pattern demo styles for a tiled UI layout.
+
 ## 0.5.0 (2018-03-26)
 
 ### Added

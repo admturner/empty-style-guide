@@ -12,7 +12,7 @@ baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: admturner
 github_repository_url: https://github.com/admturner/empty-style-guide
-version: 0.5.0
+version: 0.6.0
 
 # Exclude from processing.
 exclude:

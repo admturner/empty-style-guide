@@ -71,11 +71,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+h2 {
+    color: #282a36;
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
+}
+
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $nav-color;
 
     &:hover,
     &:focus {
@@ -98,6 +108,17 @@ blockquote {
     > :last-child {
         margin-bottom: 0;
     }
+}
+
+/**
+ * Buttons
+ */
+button {
+    background: transparent center center no-repeat;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
 }
 
 /**

@@ -5,7 +5,9 @@
 
     <body>
 
-        {%- include header.html -%}
+        <div class="header-decor">
+            {%- include header.html -%}
+        </div>
 
         {%- for item in site.patterns -%}
             {%- if item.id == page.id -%}

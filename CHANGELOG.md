@@ -17,7 +17,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
-## (unreleased)
+## 0.6.1 (2018-04-02)
 
 ### Fixed
 
@@ -25,12 +25,21 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Changed
 
+- Increased paragraph font size.
+- Adjusted some colors in the header.
+- Use JS for pattern lib nav sub-section expander.
+- Switch to the Dracula theme for syntax highlighting colors.
+- Switch to IBM Plex Sans and Mono for the UI base font.
+- Add conditionals to the CSS head link to only include `media` and `type` when actually needed.
+- Use UI tile layout for colors pattern.
+- Rename `nav-section.html` include to the more descriptive `pattern-nav.html`.
 - Remove inline styles from the 404 page and simplify the template (point to the `page` layout instead of `default`).
 - Replace default first post with a brief post about doing CSS audits.
 - Add some frontmatter to the `main.scss` file.
 
 ### Added
 
+- JS controllers to set pattern nav menu to dockable.
 - Basic layout template for the items in the 'usage' collection.
 - Add "Usage" section to the `pattern.html` layout when one is present in the `_usage` directory matching the title of the current pattern.
 - Add "Usage" collection definition in the site config file.

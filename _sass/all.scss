@@ -1,6 +1,17 @@
 @charset "utf-8";
 
 // Define defaults for each variable.
+$dt-gray-dark: #282a36;  // Background
+$dt-gray: #44475a;       // Current Line & Selection
+$dt-gray-light: #f8f8f2; // Foreground
+$dt-blue: #6272a4;       // Comment
+$dt-cyan: #8be9fd;
+$dt-green: #50fa7b;
+$dt-orange: #ffb86c;
+$dt-pink: #ff79c6;
+$dt-purple: #bd93f9;
+$dt-red: #ff5555;
+$dt-yellow: #f1fa8c;
 
 $base-font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif !default;
 $mono-font-family: "IBM Plex Mono", monospace !default;
@@ -13,7 +24,7 @@ $spacing-unit:     30px !default;
 
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
-$brand-color:      #1756a9 !default;
+$nav-color:      #1756a9 !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;

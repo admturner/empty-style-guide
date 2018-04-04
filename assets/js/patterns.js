@@ -64,4 +64,49 @@ Array.from(navtitles).forEach(function(navtitle) {
 
     });
 
+    let demoInput = document.getElementById('pattern-demo-width');
+    let demoContainer = document.querySelector('pattern-demo');
+    let demoWidthSetters = document.getElementsByClassName('pattern-demo-width-setter');
+
+    function getWidth(e) {
+        return e.clientWidth;
+    }
+
+    function getValue(e) {
+        return e.value;
+    }
+
+    function updateWidthValue(item) {
+        item.value = getWidth(document.querySelector('pattern-demo'));
+    }
+
+    function resizeDemoContainer(item, width) {
+        item.style.width = width + "px"
+    }
+
+    // First populate the demo width input value with its base value.
+    updateWidthValue(demoInput);
+
+    demoInput.addEventListener('mouseup', function() {
+        var newValue = getValue(demoInput);
+        resizeDemoContainer(demoContainer, newValue);
+        updateWidthValue(demoInput);
+    } );
+
+    demoInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            var newValue = getValue(demoInput);
+            resizeDemoContainer(demoContainer, newValue);
+            updateWidthValue(demoInput);
+        }
+    }, false );
+
+    // Array.from(demoWidthSetters).forEach(function(set) {
+    //     set.addEventListener('mouseup', function() {
+    //         var newValue = getValue(set);
+    //         resizeDemoContainer(demoContainer, newValue);
+    //         updateWidthValue(newValue);
+    //     }, false);
+    // } );
+
 })();

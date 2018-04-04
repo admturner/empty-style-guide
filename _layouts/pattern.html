@@ -27,6 +27,13 @@ layout: default
 
     <section class="pattern-demo">
         <h2>Demo</h2>
+        <label for="pattern-demo-width">Width (pixels):</label>
+        <input id="pattern-demo-width" type="number" min="0" max="999999" value="" step="1" name="demoWidth" pattern="\d+">
+<!-- for max customizability, these should be generated as a foreach built from a data object -->
+{%- assign breakpoint = '630' -%}
+{%- assign bpname = 'medium' -%}
+<!-- <button class="pattern-demo-width-setter" type="button" value="{{ breakpoint }}">Set to {{ breakpoint }}</button>
+<button class="pattern-demo-width-setter" type="button" value="1200">Set to 1200</button> -->
         <template id="pattern-demo">
             {%- include pattern-styles.html -%}
             <div class="pattern-inner">

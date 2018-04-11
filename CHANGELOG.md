@@ -17,6 +17,16 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## (unreleased)
+
+### Changed
+
+- Rename pattern nav include to `nav-pattern-library` to match the two new sub-navs.
+
+### Added
+
+
+
 ## 0.7.0 (2018-04-10)
 
 ### Changed

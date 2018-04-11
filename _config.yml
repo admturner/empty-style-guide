@@ -64,3 +64,8 @@ defaults:
       type: "styleguide"
     values:
       layout: page
+  -
+    scope:
+      path: "assets/images"
+    values:
+      image: true

@@ -26,6 +26,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Added
 
+- Styles to use flexbox layout for the pattern demo meta layout.
 - Create standard and secondary button styles.
 - Reset button in the pattern demo to reset the demo container width to the viewport size or the max, whichever is smaller.
 - Buttons in the pattern demo section to control changing its width.

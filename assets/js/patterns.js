@@ -66,15 +66,10 @@ Array.from(navtitles).forEach(function(navtitle) {
 
     var demoInput, resetButton, demoContainer, demoWidthSetters;
 
-    const baseContainerWidth = getWidth(document.querySelector('pattern-demo'));
-
     demoInput = document.getElementById('pattern-demo-width');
     resetButton = document.getElementById('reset-width');
     demoContainer = document.querySelector('pattern-demo');
-    demoWidthSetters = document.getElementsByClassName('pattern-demo-width-setter');
-
-    // Set base input controller value.
-    demoInput.value = baseContainerWidth;
+    demoWidthSetters = document.getElementsByClassName('set-pattern-width');
 
     function getWidth(e) {
         return e.clientWidth;
@@ -84,59 +79,99 @@ Array.from(navtitles).forEach(function(navtitle) {
         return e.value;
     }
 
-    function resizeDemoContainer() {
-        demoContainer.style.width = getValue(demoInput) + 'px';
+    function updateInputValue() {
+        demoInput.value = getWidth(demoContainer);
     }
 
-    var smallBreakpoint = 800;
+    function resizeDemoContainer(width = null) {
+        if ( ! width ) {
+            demoContainer.style.width = getValue(demoInput) + 'px';
+        } else if ( "number" === typeof width ) {
+            demoContainer.style.width = width + 'px';
+        } else {
+            console.log('Invalid width input: Must be a number.');
+            return;
+        }
+    }
 
     var resize = {
-        reset: baseContainerWidth,
+        update: true,
         demoContainer: function() {
-            if ( undefined !== this.reset ) {
-                demoContainer.style.width = this.reset + 'px';
-                demoInput.value = this.reset;
-            } else if ( "live" == this ) {
+            if ( undefined !== this.update ) {
                 resizeDemoContainer();
-            } else if ( "smallBp" == this ) {
-                demoContainer.style.width = smallBreakpoint + 'px';
-                demoInput.value = smallBreakpoint;
+            } else if ( "reset" == this ) {
+                demoContainer.removeAttribute('style');
+                setTimeout(updateInputValue, 500);
             } else {
-                console.log('Please enter a valid resize.demoContainer parameter.');
+                console.log(this);
+                var num = parseInt(this, 10);
+                if (isNaN(num)) { num = 'error' }
+                resizeDemoContainer(num);
+                setTimeout(updateInputValue, 500);
             }
         }
     };
 
-    // Refactor these like the ones below.
-    demoInput.addEventListener('mouseup', resize.demoContainer.bind("live", resize), false );
-    demoInput.addEventListener('blur', resize.demoContainer.bind("live", resize), false );
-    demoInput.addEventListener('keyup', function(e) {
-        if (e.key === 'Enter') {
-            resizeDemoContainer();
-        }
-    }, false );
+    // Set base input controller value to container width.
+    updateInputValue();
 
-    resetButton.addEventListener(
+    // Update the input value to match if the user resizes the window.
+    window.addEventListener('resize', updateInputValue, false);
+
+    /*
+     * Handles the width input field.
+     *
+     * @todo Refactor these like the ones below.
+     */
+    demoInput.addEventListener(
         'mouseup',
         resize.demoContainer.bind(resize),
+        false
+    );
+
+    demoInput.addEventListener(
+        'blur',
+        resize.demoContainer.bind(resize),
+        false
+    );
+
+    demoInput.addEventListener(
+        'keyup', function(e) {
+            if (e.key === 'Enter') {
+                resizeDemoContainer();
+            }
+        },
+        false
+    );
+
+    /*
+     * Handles the reset button.
+     *
+     * These set the window size and input to current view.
+     */
+    resetButton.addEventListener(
+        'mouseup',
+        resize.demoContainer.bind('reset', resize),
         false
     );
 
     resetButton.addEventListener(
         'keyup', function(e) {
             if ( 'Enter' === e.key) {
-                resize.demoContainer();
+                var doResize = resize.demoContainer.bind('reset', resize);
+                doResize();
             }
         },
         false
     );
 
-    // Array.from(demoWidthSetters).forEach(function(set) {
-    //     set.addEventListener('mouseup', function() {
-    //         var newValue = getValue(set);
-    //         resizeDemoContainer(demoContainer, newValue);
-    //         setWidthInputValue(newValue);
-    //     }, false);
-    // } );
+    Array.from(demoWidthSetters).forEach(function(e) {
+        console.log(e.value);
+        e.addEventListener(
+            'mouseup',
+            resize.demoContainer.bind(e.value, resize),
+            false
+        );
+    } );
 
 })();

@@ -21,6 +21,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Changed
 
+- Create a Style Guide ('styleguide') collection type.
 - Rename pattern nav include to `nav-pattern-library` to match the two new sub-navs.
 
 ### Added

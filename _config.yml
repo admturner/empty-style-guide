@@ -40,6 +40,10 @@ collections:
   usage:
     title: Usage
     output: false
+  styleguide:
+    title: Style Guide
+    output: true
+    permalink: /styleguide/:path/
 
 defaults:
   -
@@ -54,3 +58,9 @@ defaults:
       type: "usage"
     values:
       layout: usage
+  -
+    scope:
+      path: ""
+      type: "styleguide"
+    values:
+      layout: page

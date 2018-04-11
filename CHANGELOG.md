@@ -33,7 +33,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 - Initial splash page for Style Guide collection.
 - Directory for Style Guide collection with initial Accessibility checklist.
-- Two new sub navigation menus for top-level pages and for the Style Guide collection.
+- New sub navigation menu for the Style Guide collection.
 - Create a Style Guide ('styleguide') collection type.
 - A scope value for image assets.
 

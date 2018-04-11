@@ -15,6 +15,12 @@
             {%- endif -%}
         {%- endfor -%}
 
+        {%- for item in site.styleguide -%}
+            {%- if item.id == page.id -%}
+                {%- include nav-style-guide.html -%}
+            {%- endif -%}
+        {%- endfor -%}
+
         <main class="page-content" aria-label="Content">
 
             {{ content }}

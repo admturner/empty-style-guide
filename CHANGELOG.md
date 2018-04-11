@@ -17,6 +17,12 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## 0.7.0 (2018-04-10)
+
+### Added
+
+- Date yaml file for storing user's preferred breakpoints for the demo container width controller.
+
 ## 0.6.1 (2018-04-02)
 
 ### Fixed

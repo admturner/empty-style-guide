@@ -19,12 +19,19 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ## (unreleased)
 
+### Fixed
+
+- Move pattern demo controller functionality inside the custom element constructor to avoid missed calls on other pages.
+
 ### Changed
 
 - Rename pattern nav include to `nav-pattern-library` to match the two new sub-navs.
 
 ### Added
 
+- Initial splash page for Style Guide collection.
+- Directory for Style Guide collection with initial Accessibility checklist.
+- Two new sub navigation menus for top-level pages and for the Style Guide collection.
 - Create a Style Guide ('styleguide') collection type.
 - A scope value for image assets.
 

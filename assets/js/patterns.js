@@ -58,120 +58,119 @@ Array.from(navtitles).forEach(function(navtitle) {
 
         constructor() {
             super();
+            var demoInput, resetButton, demoContainer, demoWidthSetters;
+
             let shadowRoot = this.attachShadow({mode: 'open'});
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
+
+            demoInput = document.getElementById('pattern-demo-width');
+            resetButton = document.getElementById('reset-width');
+            demoContainer = document.querySelector('pattern-demo');
+            demoWidthSetters = document.getElementsByClassName('set-pattern-width');
+
+            function getWidth(e) {
+                return e.clientWidth;
+            }
+
+            function getValue(e) {
+                return e.value;
+            }
+
+            function updateInputValue() {
+                demoInput.value = getWidth(demoContainer);
+            }
+
+            function resizeDemoContainer(width = null) {
+                if ( ! width ) {
+                    demoContainer.style.width = getValue(demoInput) + 'px';
+                } else if ( "number" === typeof width ) {
+                    demoContainer.style.width = width + 'px';
+                } else {
+                    console.log('Invalid width input: Must be a number.');
+                    return;
+                }
+            }
+
+            var resize = {
+                update: true,
+                demoContainer: function() {
+                    if ( undefined !== this.update ) {
+                        resizeDemoContainer();
+                    } else if ( "reset" == this ) {
+                        demoContainer.removeAttribute('style');
+                        setTimeout(updateInputValue, 500);
+                    } else {
+                        var num = parseInt(this, 10);
+                        if (isNaN(num)) { num = 'error' }
+                        resizeDemoContainer(num);
+                        setTimeout(updateInputValue, 500);
+                    }
+                }
+            };
+
+            // Set base input controller value to container width.
+            updateInputValue();
+
+            // Update the input value to match if the user resizes the window.
+            window.addEventListener('resize', updateInputValue, false);
+
+            /*
+             * Handles the width input field.
+             *
+             * @todo Refactor these like the ones below.
+             */
+            demoInput.addEventListener(
+                'mouseup',
+                resize.demoContainer.bind(resize),
+                false
+            );
+
+            demoInput.addEventListener(
+                'blur',
+                resize.demoContainer.bind(resize),
+                false
+            );
+
+            demoInput.addEventListener(
+                'keyup', function(e) {
+                    if (e.key === 'Enter') {
+                        resizeDemoContainer();
+                    }
+                },
+                false
+            );
+
+            /*
+             * Handles the reset button.
+             *
+             * These set the window size and input to current view.
+             */
+            resetButton.addEventListener(
+                'mouseup',
+                resize.demoContainer.bind('reset', resize),
+                false
+            );
+
+            resetButton.addEventListener(
+                'keyup', function(e) {
+                    if ( 'Enter' === e.key) {
+                        var doResize = resize.demoContainer.bind('reset', resize);
+                        doResize();
+                    }
+                },
+                false
+            );
+
+            Array.from(demoWidthSetters).forEach(function(e) {
+                e.addEventListener(
+                    'mouseup',
+                    resize.demoContainer.bind(e.value, resize),
+                    false
+                );
+            } );
+
         }
 
     });
-
-    var demoInput, resetButton, demoContainer, demoWidthSetters;
-
-    demoInput = document.getElementById('pattern-demo-width');
-    resetButton = document.getElementById('reset-width');
-    demoContainer = document.querySelector('pattern-demo');
-    demoWidthSetters = document.getElementsByClassName('set-pattern-width');
-
-    function getWidth(e) {
-        return e.clientWidth;
-    }
-
-    function getValue(e) {
-        return e.value;
-    }
-
-    function updateInputValue() {
-        demoInput.value = getWidth(demoContainer);
-    }
-
-    function resizeDemoContainer(width = null) {
-        if ( ! width ) {
-            demoContainer.style.width = getValue(demoInput) + 'px';
-        } else if ( "number" === typeof width ) {
-            demoContainer.style.width = width + 'px';
-        } else {
-            console.log('Invalid width input: Must be a number.');
-            return;
-        }
-    }
-
-    var resize = {
-        update: true,
-        demoContainer: function() {
-            if ( undefined !== this.update ) {
-                resizeDemoContainer();
-            } else if ( "reset" == this ) {
-                demoContainer.removeAttribute('style');
-                setTimeout(updateInputValue, 500);
-            } else {
-                console.log(this);
-                var num = parseInt(this, 10);
-                if (isNaN(num)) { num = 'error' }
-                resizeDemoContainer(num);
-                setTimeout(updateInputValue, 500);
-            }
-        }
-    };
-
-    // Set base input controller value to container width.
-    updateInputValue();
-
-    // Update the input value to match if the user resizes the window.
-    window.addEventListener('resize', updateInputValue, false);
-
-    /*
-     * Handles the width input field.
-     *
-     * @todo Refactor these like the ones below.
-     */
-    demoInput.addEventListener(
-        'mouseup',
-        resize.demoContainer.bind(resize),
-        false
-    );
-
-    demoInput.addEventListener(
-        'blur',
-        resize.demoContainer.bind(resize),
-        false
-    );
-
-    demoInput.addEventListener(
-        'keyup', function(e) {
-            if (e.key === 'Enter') {
-                resizeDemoContainer();
-            }
-        },
-        false
-    );
-
-    /*
-     * Handles the reset button.
-     *
-     * These set the window size and input to current view.
-     */
-    resetButton.addEventListener(
-        'mouseup',
-        resize.demoContainer.bind('reset', resize),
-        false
-    );
-
-    resetButton.addEventListener(
-        'keyup', function(e) {
-            if ( 'Enter' === e.key) {
-                var doResize = resize.demoContainer.bind('reset', resize);
-                doResize();
-            }
-        },
-        false
-    );
-
-    Array.from(demoWidthSetters).forEach(function(e) {
-        console.log(e.value);
-        e.addEventListener(
-            'mouseup',
-            resize.demoContainer.bind(e.value, resize),
-            false
-        );
-    } );
 
 })();

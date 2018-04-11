@@ -70,6 +70,7 @@ article {
     background: #fff;
     border-radius: 0 5px 5px 0;
     box-shadow: 2px 3px 5px 1px rgba(20, 20, 20, .2);
+    @extend %button;
     height: 3.5rem;
     position: fixed;
     top: 1.5rem;
@@ -83,7 +84,6 @@ article {
 
     &:hover,
     &:focus {
-        background: #efefef;
         box-shadow: 2px 3px 7px 3px rgba(20, 20, 20, .2);
     }
 
@@ -302,6 +302,40 @@ nav {
 .post-link {
     display: block;
     @include relative-font-size(1.5);
+}
+
+/**
+ * Patterns
+ */
+.pattern-demo-meta {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+
+    h2 {
+        margin-right: auto;
+    }
+
+    label,
+    input {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+        border: 1px solid $dt-gray-dark;
+        margin-right: 1rem;
+        padding-left: .25em;
+
+        &:focus {
+            background: lighten($dt-pink, 21%);
+        }
+    }
+}
+
+.pattern-inner {
+    margin: 1rem;
 }
 
 /**

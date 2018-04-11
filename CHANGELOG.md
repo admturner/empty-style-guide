@@ -17,6 +17,23 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## 0.7.0 (2018-04-10)
+
+### Changed
+
+- Refactor demo container controller event listeners.
+- Convert default button into a mixin.
+- Revise order of the pattern demo meta and controllers to facilitate flexbox layout.
+
+### Added
+
+- JavaScript controllers to manage the width of the pattern demo container.
+- Styles to use flexbox layout for the pattern demo meta layout.
+- Create standard and secondary button styles.
+- Reset button in the pattern demo to reset the demo container width to the viewport size or the max, whichever is smaller.
+- Buttons in the pattern demo section to control changing its width.
+- Date yaml file for storing user's preferred breakpoints for the demo container width controller.
+
 ## 0.6.1 (2018-04-02)
 
 ### Fixed

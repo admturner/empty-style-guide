@@ -26,7 +26,17 @@ layout: default
     </section>
 
     <section class="pattern-demo">
-        <h2>Demo</h2>
+        <div class="pattern-demo-meta">
+            <h2>Demo</h2>
+            <div class="width-freeform">
+                <label for="pattern-demo-width">Width (pixels):</label>
+                <input id="pattern-demo-width" type="number" min="0" max="9999" value="" step="1" name="demoWidth" pattern="\d+">
+            </div>
+            {%- for bp in site.data.breakpoints -%}
+                <button class="set-pattern-width" type="button" value="{{ bp.size }}">{{ bp.name | capitalize }}</button>
+            {%- endfor -%}
+            <button class="button-secondary" id="reset-width">Reset</button>
+        </div>
         <template id="pattern-demo">
             {%- include pattern-styles.html -%}
             <div class="pattern-inner">

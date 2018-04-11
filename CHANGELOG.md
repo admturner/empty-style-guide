@@ -17,14 +17,16 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
-## (unreleased)
+## 0.8.2 (unreleased)
 
 ### Fixed
 
+- Move variables into conditionals and generally refactor to solve null property errors.
 - Move pattern demo controller functionality inside the custom element constructor to avoid missed calls on other pages.
 
 ### Changed
 
+- Call default JavaScript on all pages, rename.
 - Rename pattern nav include to `nav-pattern-library` to match the two new sub-navs.
 
 ### Added

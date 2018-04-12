@@ -11,7 +11,13 @@
 
         {%- for item in site.patterns -%}
             {%- if item.id == page.id -%}
-                {%- include pattern-nav.html -%}
+                {%- include nav-pattern-library.html -%}
+            {%- endif -%}
+        {%- endfor -%}
+
+        {%- for item in site.styleguide -%}
+            {%- if item.id == page.id -%}
+                {%- include nav-style-guide.html -%}
             {%- endif -%}
         {%- endfor -%}
 

@@ -17,6 +17,54 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## 0.8.2 (2018-04-11)
+
+### Fixed
+
+- Move variables into conditionals and generally refactor to solve null property errors.
+- Move pattern demo controller functionality inside the custom element constructor to avoid missed calls on other pages.
+
+### Changed
+
+- Revise the article content grid to target an 80ch width for the main content and add another row.
+- Rearrange the pattern elements on the article grid.
+- Place the post content on the article grid and limit width on large displays.
+- Add padding to the main element for narrow displays.
+- Add top and bottom margins to `h2` elements.
+- Set min-width on main content button elements.
+- Bump up font size on main content `ul` and `ol` text.
+- Move post meta section outside of header to align on the grid.
+- Move pattern source section to bottom section of pattern layout template.
+- Call default JavaScript on all pages, rename.
+- Rename pattern nav include to `nav-pattern-library` to match the two new sub-navs.
+
+### Added
+
+- Author and date modified variables to the Style Guide front matter.
+- Meta section to page template for author(s) and modified date.
+- Initial splash page for Style Guide collection.
+- Directory for Style Guide collection with initial Accessibility checklist.
+- New sub navigation menu for the Style Guide collection.
+- Create a Style Guide ('styleguide') collection type.
+- A scope value for image assets.
+
+## 0.7.0 (2018-04-10)
+
+### Changed
+
+- Refactor demo container controller event listeners.
+- Convert default button into a mixin.
+- Revise order of the pattern demo meta and controllers to facilitate flexbox layout.
+
+### Added
+
+- JavaScript controllers to manage the width of the pattern demo container.
+- Styles to use flexbox layout for the pattern demo meta layout.
+- Create standard and secondary button styles.
+- Reset button in the pattern demo to reset the demo container width to the viewport size or the max, whichever is smaller.
+- Buttons in the pattern demo section to control changing its width.
+- Date yaml file for storing user's preferred breakpoints for the demo container width controller.
+
 ## 0.6.1 (2018-04-02)
 
 ### Fixed

@@ -2,9 +2,12 @@
 category: Accessibility
 order: 1
 title: "Accessibility Checklist"
+authors:
+    - name: Adam Turner
+updated: 2018-04-11
 ---
 
-HRS content must meet all of the following standards. These standards are organized under the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/WAI/WCAG20/glance/)'s four main guiding principles:
+These standards are organized under the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/WAI/WCAG20/glance/)'s four main guiding principles:
 
 * Perceivable
 * Operable

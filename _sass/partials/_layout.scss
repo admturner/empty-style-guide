@@ -22,6 +22,7 @@ body {
 main {
     max-width: 72.5rem;
     margin: 3rem auto;
+    padding: 0 1rem;
 }
 
 .site-footer {
@@ -40,26 +41,34 @@ main {
 
 article {
     display: grid;
-    grid: "article-header article-header" 1fr /* row */
-          "section-one section-two" auto /* row */
-          "section-three section-three" auto /* row */
-          / minmax(100px, 1.3fr) minmax(100px, 1fr); /* columns */
+    grid: "post-header post-header-aside" 1fr
+          "section-one section-two" auto
+          "section-three section-three" auto
+          "section-four section-four" auto
+          / minmax(100px, 80ch) minmax(100px, 1fr); /* columns */
     grid-gap: 1.5rem 2rem;
 
-    header {
-        grid-area: article-header;
+    .post-header {
+        grid-area: post-header;
     }
 
-    .pattern-source {
-        grid-area: section-one;
+    .post-meta {
+        grid-area: post-header-aside;
     }
 
+    .post-content,
     .pattern-usage {
-        grid-area: section-two;
+        grid-area: section-one / span 2;
+        max-width: 50em; /* For browsers that don't support `ch` */
+        max-width: 80ch;
     }
 
     .pattern-demo {
         grid-area: section-three;
+    }
+
+    .pattern-source {
+        grid-area: section-four;
     }
 }
 
@@ -310,6 +319,7 @@ nav {
 .pattern-demo-meta {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
 
     h2 {
@@ -361,13 +371,8 @@ nav {
     margin-bottom: $spacing-unit;
 
     h2 {
-        @include relative-font-size(2);
-
-        @include media-query($on-laptop) {
-
-            @include relative-font-size(1.75);
-
-        }
+        font-size: 2rem;
+        margin: 1.25rem 0 .25rem;
     }
 
     h3 {

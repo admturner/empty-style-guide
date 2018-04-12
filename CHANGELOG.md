@@ -26,6 +26,11 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Changed
 
+- Revise the article content grid to target an 80ch width for the main content and add another row.
+- Rearrange the pattern elements on the article grid.
+- Place the post content on the article grid and limit width on large displays.
+- Add padding to the main element for narrow displays.
+- Add top and bottom margins to `h2` elements.
 - Set min-width on main content button elements.
 - Bump up font size on main content `ul` and `ol` text.
 - Move post meta section outside of header to align on the grid.

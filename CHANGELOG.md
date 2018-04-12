@@ -40,6 +40,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Added
 
+- Author and date modified variables to the Style Guide front matter.
 - Meta section to page template for author(s) and modified date.
 - Initial splash page for Style Guide collection.
 - Directory for Style Guide collection with initial Accessibility checklist.

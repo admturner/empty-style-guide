@@ -1,7 +1,9 @@
 ---
 category: Accessibility
 title: "Accessibility Checklist"
-author: Adam Turner
+authors:
+    - name: Adam Turner
+updated: 2018-04-11
 ---
 
 These standards are organized under the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/WAI/WCAG20/glance/)'s four main guiding principles:

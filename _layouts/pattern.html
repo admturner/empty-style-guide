@@ -7,15 +7,6 @@ layout: default
         <h1 class="post-title">{{ page.title | escape }}</h1>
     </header>
 
-    <section class="pattern-source">
-        {%- if true == page.show_source -%}
-            <h2>Source</h2>
-            {%- highlight html -%}
-                {{ content }}
-            {%- endhighlight -%}
-        {%- endif -%}
-    </section>
-
     <section class="pattern-usage">
         {%- for use in site.usage -%}
             {%- if page.title == use.title -%}
@@ -44,6 +35,15 @@ layout: default
             </div>
         </template>
         <pattern-demo></pattern-demo>
+    </section>
+
+    <section class="pattern-source">
+        {%- if true == page.show_source -%}
+            <h2>Source</h2>
+            {%- highlight html -%}
+                {{ content }}
+            {%- endhighlight -%}
+        {%- endif -%}
     </section>
 
 </article>

@@ -26,6 +26,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Changed
 
+- Move pattern source section to bottom section of pattern layout template.
 - Call default JavaScript on all pages, rename.
 - Rename pattern nav include to `nav-pattern-library` to match the two new sub-navs.
 

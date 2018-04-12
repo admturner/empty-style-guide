@@ -1,6 +1,6 @@
 ---
 category: 1. Global
-order: 2
+order: 1
 title: Colors
 description: The site colors.
 show_source: false
@@ -12,9 +12,9 @@ show_source: false
         {%- for color in group.colors -%}
         <p>
             <span class="ui--pattern-box" style="background: #{{ color.hex }};"></span>
-            @{{ color.name | slugify }}<br>
-            hex: {{ color.hex }}<br>
-            rgb: {{ color.rgb }}
+            ${{ color.name | slugify }}<br>
+            #{{ color.hex }}<br>
+            rgb({{ color.rgb }})
         </p>
         {%- endfor -%}
     </div>

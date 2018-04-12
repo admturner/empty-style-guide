@@ -18,11 +18,19 @@ styles:
         url: https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,600,600i|IBM+Plex+Sans:400,400i,700,700i
   - group: pattern-library
     sheets:
-      - name: Empty WordPress Theme CSS
-        url: https://adamturner.org/wp-content/themes/grammatizator_act/library/css/style.css
+      - name: WSU Spine CSS
+        url: https://repo.wsu.edu/spine/2/spine.min.css
+        type: text/css
+        media: all
+      - name: Spine Theme CSS
+        url: http://local.wordpress.test/wp-content/themes/wsuspine/style.css
+        type: text/css
+        media: all
+      - name: HRS Child Theme CSS
+        url: http://local.wordpress.test/wp-content/themes/hrs.wsu.edu/assets/css/style.css
         type: text/css
         media: all
       - name: Open Sans CSS
-        url: //fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C600%2C600italic%2C400%2C400italic%2C700&amp;subset=latin%2Clatin-ext
+        url: https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i
         type: text/css
         media: all

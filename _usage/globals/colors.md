@@ -2,6 +2,4 @@
 title: Colors
 ---
 
-About the colors.
-
-More about the colors.
+The HRS website uses the [Washington State University brand colors](https://brand.wsu.edu/visual/colors/).

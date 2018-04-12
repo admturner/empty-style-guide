@@ -2,7 +2,7 @@
 layout: post
 title:  "CSS Audits"
 author: Adam Turner
-date:   2018-03-21
+date:   2018-03-21 11:10:52 -0800
 categories: audits
 ---
 

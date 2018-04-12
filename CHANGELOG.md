@@ -26,6 +26,8 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Changed
 
+- Set min-width on main content button elements.
+- Bump up font size on main content `ul` and `ol` text.
 - Move post meta section outside of header to align on the grid.
 - Move pattern source section to bottom section of pattern layout template.
 - Call default JavaScript on all pages, rename.

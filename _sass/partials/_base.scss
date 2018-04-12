@@ -53,6 +53,7 @@ figcaption {
 main {
     ul,
     ol {
+        font-size: 1.3rem;
         margin-left: $spacing-unit;
     }
 
@@ -77,8 +78,8 @@ h2 {
 }
 
 p {
-    font-size: 1.3em;
-    margin-bottom: 1.5em;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
 }
 
 /**
@@ -138,6 +139,7 @@ button,
         color: $dt-gray-light;
         font-size: 1rem;
         margin: .5em;
+        min-width: fit-content;
         padding: .75em 1em;
 
         &:hover,

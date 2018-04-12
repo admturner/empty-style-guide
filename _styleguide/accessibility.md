@@ -38,8 +38,8 @@ We've separated the checklists into two groups:
 ### For Content Managers: Fundamentals of Accessible Content
 
 
-
 ### Additional Requirements: For Template Authors and Developers
+
 
 ### Perceivability Checklist
 

@@ -3,15 +3,17 @@
         border: 1px solid lightblue;
         contain: content;
         display: block;
-        font: 16px "Open Sans", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif;
+		font: 16px "Open Sans", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif;
 		line-height: 1.5;
+        transition-delay: .1s;
+        transition-duration: .3s;
+        transition-property: width;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        width: 100%;
     }
 	button {
 		font-family: "Open Sans", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif;
 	}
-    .pattern-inner {
-        margin: 1rem;
-    }
     .ui--tiles {
         align-items: flex-start;
         display: flex;

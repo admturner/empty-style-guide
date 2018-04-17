@@ -22,6 +22,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Changed
 
 - Add initial notification component markup.
+- Rearrange Accessibility Checklist styleguide.
 
 ## 0.8.2 (2018-04-11)
 

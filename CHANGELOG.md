@@ -17,6 +17,12 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## (unreleased)
+
+### Changed
+
+- Add initial notification component markup.
+
 ## 0.8.2 (2018-04-11)
 
 ### Fixed

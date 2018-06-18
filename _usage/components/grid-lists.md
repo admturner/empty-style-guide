@@ -2,8 +2,6 @@
 title: "Grid Lists"
 ---
 
-TODO: Check to make sure these class and style definitions are generic enough to apply to any content collection (something like: `.gallery, .grid-list`); or create a `grid-list` mixin.
-
 A repeated set of tiles arrayed in a grid of cells with one or more columns.
 
 Use to display identical or very similar content types (such as a collection of images or magazine covers and titles).

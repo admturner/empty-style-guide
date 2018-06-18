@@ -3,18 +3,11 @@ category: Accessibility
 order: 1
 title: "Accessibility Checklist"
 authors:
-    - name: Adam Turner
+  - name: Adam Turner
 updated: 2018-04-11
 ---
 
-These standards are organized under the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/WAI/WCAG20/glance/)'s four main guiding principles:
-
-* Perceivable
-* Operable
-* Understandable
-* Robust
-
-## At a Glance
+## A Focus on Usability
 
 We produce content for a diverse audience who interacts with our material in many different ways. Our goal isn't merely to check off boxes on a list, but to guarantee that we do not exclude people based on our design decisions. Each item on these lists contributes to our goal of meeting our users wherever they are and allowing them to access our content however they choose.
 
@@ -31,20 +24,24 @@ With this in mind, consider these questions as you create content for the HRS we
 
 ## Checklists
 
-Use the following checklists to determine whether your content aligns with the WCAG 2.0 standards and best practices. Not every page will include every element. If your page doesn't have video, for example, you don't need to meet the requirements for audiovisual content.
+These standards are organized under the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/WAI/WCAG20/glance/)'s four main guiding principles:
+
+* Perceivable
+* Operable
+* Understandable
+* Robust
+
+Use the following checklists as a guide to help determine whether your content aligns with the WCAG 2.0 standards and best practices. Not every page will include every element. If your page doesn't have video, for example, you don't need to meet the requirements for audiovisual content. (These checklists are not perfect and should not be used to replace formal evaluation.)
 
 We've separated the checklists into two groups:
 
-* The first, for Content Managers, focuses on requirements specific to content and doesn't include things like ARIA roles and CSS that are taken care of by the WordPress templates.
-* The second, for template authors and site developers, includes elements like ARIA, CSS, and form design that are defined in the WordPress templates and backend.
+1. The first, for Content Managers, focuses on requirements specific to content and doesn't include things like <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes and <abbr title="Cascading Stylesheets">CSS</abbr> that are taken care of by the WordPress templates.
 
-### For Content Managers: Fundamentals of Accessible Content
+2. The second, for template authors and site developers, includes elements like ARIA, CSS, and form design that need to be defined in the WordPress templates and backend.
 
+### Fundamentals of Accessible Content for Content Managers
 
-### Additional Requirements: For Template Authors and Developers
-
-
-### Perceivability Checklist
+#### Perceivability Checklist
 
 * [ ] All text content is in [plain text]() (for example, there are no images of text).
 * [ ] All images have equivalent, [descriptive alternate ("alt") text]().
@@ -54,40 +51,81 @@ We've separated the checklists into two groups:
 * [ ] All content uses [semantic markup]() to designate headings, lists, and emphasized or special text.
 * [ ] [Content is organized hierarchically]() into logical sections (determined by markup order, not presentation order).
 * [ ] Instructions and descriptions [avoid sensory language]() and do not require the user to see the layout or design of the page or to hear a sound.
+* [ ] If you have added colors manually, they have appropriate contrast (at least 4.5:1) and are not used as the sole method of distinguishing meaning.
 * [ ] Tables are used only for specifically [tabular data]().
-* [ ] [Color is not used as the sole method of conveying content]() or distinguishing elements (especially links) from their surroundings.
-* [ ] All text has a [contrast ratio]() of at least 4.5:1, or 3:1 for heading text (at least 18 point).
-* [ ] Users can easily resize the text, and the page [remains readable and functional]() when the text is doubled in size without horizontal scrolling.
-* [ ] [Blocks of text]() more than one sentence long are no more than 80 characters wide, are either left- or right-aligned, and have at least 1.5 times line spacing.
+* [ ] [Blocks of text]() more than one sentence long are no more than 80 characters wide and are either left- or right-aligned.
 
-### Operability Checklist
+#### Operability Checklist
 
-* [ ] All page functionality is [available using the keyboard]() and it is visually clear which element has keyboard focus.
-* [ ] [Keyboard focus is never trapped]() by one particular page element.
-* [ ] A link is provided to [skip directly to content]() to avoid navigation and other repeated page elements.
 * [ ] [All links are descriptive]() so that the purpose or destination of each link is clear from the link text alone. (Avoid "click here" or "learn more").
 * [ ] No two [links with the same text]() go to different locations.
-* [ ] Web pages that are part of a series or in a complex site include an [indication of current location]() (such as with a breadcrumb component).
 * [ ] Content and functionality has [no time limits]() or constraints except as required by real-time events (in which case alternatives should be available).
-* [ ] [Users can pause, stop, or hide]() all page interruptions (such as alerts) and automatically updating content (such as news tickers or automatically refreshing content).
 * [ ] [Moving, blinking, or scrolling]() content that lasts longer than 5 seconds does not occur automatically and can be paused, stopped, or hidden by the user.
 * [ ] [No page content flashes]() more the 3 times per second.
 
-### Understandability Checklist
+#### Understandability Checklist
 
 * [ ] [Content is written in plain language](). Writing is concise and straightforward.
 * [ ] [Words that may be ambiguous]() or unknown are defined through adjacent text or in a glossary or definition list.
 * [ ] Links never force users into a new tab or window (using `target="_blank"`) unless doing so is required to preserve user data (such as on a form), in which case the behavior should be made clear in the link.
-* [ ] [When webpage elements receive focus or input]() they do not substantially change the page without making such changes clear in advance (such as spawning popup windows or changing keyboard focus).
 * [ ] Required form elements and form elements requiring specific input formats (such as phone numbers) [explain these requirements in their label text]().
+
+#### Robustness Checklist
+
+* [ ] All page content uses valid HTML.
+* [ ] All page content resizes flexibly to remain usable and user friendly at any screen size.
+
+### Full Accessibility Requirements for Template Authors and Developers
+
+#### Perceivability Checklist
+
+* [ ] All text content is in [plain text]() (for example, there are no images of text).
+* [ ] All images have equivalent, [descriptive alternate ("alt") text]().
+* [ ] Text versions are available for all [charts and graphs]().
+* [ ] [Color is not used as the sole method of conveying content]() or distinguishing elements (especially links) from their surroundings.
+* [ ] All text has a [contrast ratio]() of at least 4.5:1, or 3:1 for heading text (at least 18 point).
+* [ ] Form elements and buttons have descriptive associated [text labels]().
+* [ ] All content uses [semantic markup]() to designate headings, lists, and emphasized or special text.
+* [ ] [Content is organized hierarchically]() into logical sections (determined by markup order, not presentation order).
+* [ ] Instructions and descriptions [avoid sensory language]() and do not require the user to see the layout or design of the page or to hear a sound.
+* [ ] Tables are used only for specifically [tabular data]().
+* [ ] [Blocks of text]() more than one sentence long are no more than 80 characters wide, are either left- or right-aligned, and have at least 1.5 times line spacing.
+* [ ] Users can easily resize the text, and the page [remains readable and functional]() when the text is doubled in size without horizontal scrolling.
+* [ ] Frames are appropriately titled.
+* [ ] All audiovisual media provides [captioning and transcripts]().
+* [ ] If a video presents visual content that is not described aloud, audio descriptions are provided for the video content.
+
+#### Operability Checklist
+
+* [ ] All page functionality is [available using the keyboard]() and it is visually clear which element has keyboard focus.
+* [ ] [Keyboard focus is never trapped]() by one particular page element.
+* [ ] The focus order of elements is logical and intuitive.
+* [ ] A link is provided to [skip directly to content]() to avoid navigation and other repeated page elements.
+* [ ] Web pages that are part of a series or in a complex site include an [indication of current location]() (such as with a breadcrumb component).
+* [ ] At least two forms of site navigation are available, such as: a list of related pages, a table of contents, a site map, a site search, or a list of all available pages.
+* [ ] The web page has a descriptive and informative page title.
+* [ ] [Users can pause, stop, or hide]() all page interruptions (such as alerts) and automatically updating content (such as news tickers or automatically refreshing content).
+* [ ] [All links are descriptive]() so that the purpose or destination of each link is clear from the link text alone. (Avoid "click here" or "learn more").
+* [ ] No two [links with the same text]() go to different locations.
+* [ ] Content and functionality has [no time limits]() or constraints except as required by real-time events (in which case alternatives should be available).
+* [ ] [Moving, blinking, or scrolling]() content that lasts longer than 5 seconds does not occur automatically and can be paused, stopped, or hidden by the user.
+* [ ] [No page content flashes]() more the 3 times per second.
+
+#### Understandability Checklist
+
+* [ ] [Content is written in plain language](). Writing is concise and straightforward.
+* [ ] [Words that may be ambiguous]() or unknown are defined through adjacent text or in a glossary or definition list.
+* [ ] Links never force users into a new tab or window (using `target="_blank"`) unless doing so is required to preserve user data (such as on a form), in which case the behavior should be made clear in the link.
+* [ ] Required form elements and form elements requiring specific input formats (such as phone numbers) [explain these requirements in their label text]().
+* [ ] [When webpage elements receive focus or input]() they do not substantially change the page without making such changes clear in advance (such as spawning popup windows or changing keyboard focus).
 * [ ] [Form validation errors]() are presented clearly and instructions and suggestions provided for fixing the error.
 
-### Robustness Checklist
+#### Robustness Checklist
 
 * [ ] All page content uses valid HTML.
 * [ ] All page content resizes flexibly to remain usable and user friendly at any screen size.
 * [ ] ARIA attributes are used where needed.
-* [ ] Content uses semantic HTML5 compliant elements that do not require CSS in order to be legible and functional.
+* [ ] Content uses semantic HTML5-compliant elements that do not require CSS in order to be legible and functional.
 * [ ] Required functionality does not depend on JavaScript to work, or includes functional fallbacks for when JavaScript is unavailable.
 * [ ] Stylesheets use valid CSS that is compatible with supported browsers or that includes graceful fallbacks.
 

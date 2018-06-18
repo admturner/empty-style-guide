@@ -7,11 +7,11 @@ layout: default
         <h1 class="post-title">{{ page.title | escape }}</h1>
     </header>
 
-    {%- if page.author or page.updated -%}
+    {%- if page.authors or page.updated -%}
     <div class="post-meta">
         {%- if page.authors -%}
+			<p>Contributors:</p>
             {%- for author in page.authors -%}
-                <p>Contributors:</p>
                 <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author.name }}</span></span>
             {%- endfor -%}
         {%- endif -%}

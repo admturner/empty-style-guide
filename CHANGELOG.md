@@ -19,6 +19,11 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ## 0.9.0~expansion (unreleased)
 
+### Changed
+
+- Retain spaces between stylesheets in `head.html` to preserve line breaks.
+- Use smaller text size in footer.
+
 ### Added
 
 - Add a print stylesheet.

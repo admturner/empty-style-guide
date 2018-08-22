@@ -29,6 +29,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Added
 
+- Layout style for article asides and meta sections.
 - Add a print stylesheet.
 
 ### Removed

@@ -56,6 +56,17 @@ article {
         grid-area: post-header-aside;
     }
 
+    .p-author,
+    .dt-published {
+        display: block;
+        margin-bottom: .25em;
+    }
+
+    .dt-published:before {
+        content: "Updated: ";
+        font-weight: 600;
+    }
+
     .post-content,
     .pattern-usage {
         grid-area: section-one / span 2;
@@ -70,6 +81,45 @@ article {
     .pattern-source {
         grid-area: section-four;
     }
+
+    aside,
+    .aside {
+        float: right;
+        margin-top: 0;
+        margin-left: 2rem;
+        margin-right: calc(-43% - 4rem);
+        max-width: 594px;
+        width: 30vw;
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+@media (min-width: 32em) {
+
+    .comparison {
+        display: grid;
+        margin-bottom: 1.5em;
+    	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .comparison-option:not(:last-child) {
+        border-right: 3px solid $dt-orange;
+        margin-right: 2em;
+        padding-right: 2em;
+    }
+
+}
+
+.clarification {
+    background-color: #f1f1f1;
+    border: 1px solid $dt-gray;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
 }
 
 /**

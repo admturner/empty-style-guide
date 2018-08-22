@@ -30,6 +30,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Added
 
+- Guides for working with color, headings, images, and links in WordPress.
 - Layout style for article asides and meta sections.
 - Add a print stylesheet.
 

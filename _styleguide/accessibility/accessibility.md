@@ -128,14 +128,3 @@ We've separated the checklists into two groups:
 * [ ] Content uses semantic HTML5-compliant elements that do not require CSS in order to be legible and functional.
 * [ ] Required functionality does not depend on JavaScript to work, or includes functional fallbacks for when JavaScript is unavailable.
 * [ ] Stylesheets use valid CSS that is compatible with supported browsers or that includes graceful fallbacks.
-
-## Resources
-
-* US General Services Administration [18F Accessibility Guide Checklist](https://accessibility.18f.gov/checklist/)
-* [WSU Web Communication Accessibility Checklist](https://web.wsu.edu/accessibility-guides/accessibility-checklist/)
-* [Accessibility Test Cases](https://alphagov.github.io/accessibility-tool-audit/test-cases.html)
-* [WebAIM's WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
-* [MailChimp's Writing for Accessibility guide](https://styleguide.mailchimp.com/writing-for-accessibility/)
-* [Bitsofcode Accessibility Cheatsheet](https://bitsofco.de/the-accessibility-cheatsheet/)
-* [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/)
-* [Contrast ratio checker](http://leaverou.github.io/contrast-ratio/)

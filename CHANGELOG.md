@@ -21,6 +21,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Changed
 
+- Move Accessibility styleguide files into a dedicated directory.
 - Adjust margins in syntax highlighting and layout CSS.
 - Increase size of small font size CSS variable.
 - Group style guide subnav sections by category.

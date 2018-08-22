@@ -29,6 +29,10 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 - Add a print stylesheet.
 
+### Removed
+
+- Deleted unused social media accounts.
+
 ## 0.8.2 (2018-04-11)
 
 ### Fixed

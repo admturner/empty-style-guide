@@ -30,6 +30,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Added
 
+- Images directory for styleguide guides.
 - Code reference section with guides related to the SQL Server connector.
 - Guides for working with color, headings, images, and links in WordPress.
 - Layout style for article asides and meta sections.

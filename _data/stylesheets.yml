@@ -16,6 +16,9 @@ styles:
         url: /assets/css/main.css
       - name: IBM Plex Sans
         url: https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,600,600i|IBM+Plex+Sans:400,400i,700,700i
+      - name: Print
+        url: /assets/css/print.css
+        media: print
   - group: pattern-library
     sheets:
       - name: WSU Spine CSS

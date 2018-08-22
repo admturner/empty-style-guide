@@ -17,6 +17,12 @@ This document details all notable changes to the Empty Style Guide framework. It
 ### Removed (for deprecated features removed in this release)
 -->
 
+## 0.9.0~expansion (unreleased)
+
+### Added
+
+- Add a print stylesheet.
+
 ## 0.8.2 (2018-04-11)
 
 ### Fixed

@@ -21,6 +21,7 @@ This document details all notable changes to the Empty Style Guide framework. It
 
 ### Changed
 
+- Group style guide subnav sections by category.
 - Retain spaces between stylesheets in `head.html` to preserve line breaks.
 - Use smaller text size in footer.
 

@@ -33,12 +33,18 @@ img {
     vertical-align: middle;
 }
 
+figure {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
 figure > img {
     display: block;
 }
 
 figcaption {
     font-size: $small-font-size;
+    padding-top: .5em;
 }
 
 /**
@@ -49,6 +55,7 @@ main {
     ol {
         font-size: 1.3rem;
         margin-left: $spacing-unit;
+        margin-bottom: 1.5em;
     }
 
     li {
